@@ -1,1 +1,4 @@
 .DS_Store
+src/components/Molecules/Navbar
+src/components/Molecules/TemplateCard
+src/components/Molecules/ExplodingUI

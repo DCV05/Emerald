@@ -1,0 +1,37 @@
+.k-progress {
+  background-color: var(--gray-100);
+  border-radius: 8px;
+  height: 8px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.k-progress .bar {
+  height: 100%;
+  transition: width 0.4s ease;
+  border-radius: 8px;
+}
+
+.k-progress-gray .bar {
+  background-color: var(--gray-500);
+}
+
+.k-progress-green .bar {
+  background-color: var(--green-600);
+}
+
+.k-progress-blue .bar {
+  background-color: var(--blue-600);
+}
+
+.k-progress-yellow .bar {
+  background-color: var(--yellow-600);
+}
+
+.k-progress-red .bar {
+  background-color: var(--red-600);
+}
+
+.k-progress-purple .bar {
+  background-color: var(--purple-600);
+}

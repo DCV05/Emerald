@@ -1,0 +1,38 @@
+.k-toggle {
+  display: inline-block;
+  position: relative;
+}
+
+.k-toggle > input {
+  display: none;
+}
+
+.k-toggle > .track {
+  width: 42px;
+  height: 24px;
+  background-color: var(--gray-200);
+  border-radius: 999px;
+  position: relative;
+  transition: background 0.2s;
+}
+
+.k-toggle > .track::before {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 20px;
+  height: 20px;
+  background-color: white;
+  border-radius: 50%;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+  transition: transform 0.2s;
+}
+
+.k-toggle > input:checked + .track {
+  background-color: #6366f1;
+}
+
+.k-toggle > input:checked + .track::before {
+  transform: translateX(18px);
+}

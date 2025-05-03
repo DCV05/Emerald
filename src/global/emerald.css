@@ -995,10 +995,13 @@ Definición de los border-radius                                                
   font-size: var( --24px ) !important;
 }
 
+.k-tag,
+.k-tag-gray,
 .k-tag-blue,
 .k-tag-green,
-.k-tag-pink,
-.k-tag-orange {
+.k-tag-yellow,
+.k-tag-red,
+.k-tag-purple {
   padding: 4px 10px;
   border-radius: 16px;
   display: flex;
@@ -1008,28 +1011,46 @@ Definición de los border-radius                                                
   width: fit-content;
 }
 
+.k-tag {
+  color: var(--gray-800);
+  background-color: var(--gray-100);
+  border: 2px solid var(--gray-300);
+}
+
+.k-tag-gray {
+  color: var(--gray-700);
+  background-color: var(--gray-100);
+  border: 2px solid var(--gray-200);
+}
+
 .k-tag-blue {
-  color: #175CD3;
-  background-color: #eff8ff;
-  border: 2px #B2DDFF solid;
+  color: var(--blue-700);
+  background-color: var(--blue-100);
+  border: 2px solid var(--blue-200);
 }
 
 .k-tag-green {
-  color: #067647;
-  background-color: #ABEFC6;
-  border: 2px #ecfdf3 solid;
+  color: var(--green-700);
+  background-color: var(--green-100);
+  border: 2px solid var(--green-200);
 }
 
-.k-tag-pink {
-  color: #C11574;
-  background-color: #FCCEEE;
-  border: 2px #fdf2fa solid;
+.k-tag-yellow {
+  color: var(--yellow-700);
+  background-color: var(--yellow-100);
+  border: 2px solid var(--yellow-200);
 }
 
-.k-tag-orange {
-  color: #d37517;
-  background-color: #ffd9b3;
-  border: 2px #ffd9b3 solid;
+.k-tag-red {
+  color: var(--red-700);
+  background-color: var(--red-100);
+  border: 2px solid var(--red-200);
+}
+
+.k-tag-purple {
+  color: var(--purple-700);
+  background-color: var(--purple-100);
+  border: 2px solid var(--purple-200);
 }
 
 /* -------------------- CONTAINERS -------------------- */ 

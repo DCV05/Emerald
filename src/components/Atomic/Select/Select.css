@@ -1,0 +1,15 @@
+.k-select {
+  background-color: white;
+  border: 1px solid #D5D7DA;
+  border-radius: 8px;
+  box-shadow: inset 0 -2px 0 0 #FAFAFA, 0 1px 2px 0 #0a0d120d;
+  display: block;
+  color: #414651;
+  text-decoration: none;
+  padding: 9.8px 14px;
+  width: auto;
+}
+
+.k-select:hover {
+  background-color: #FAFAFA;
+}

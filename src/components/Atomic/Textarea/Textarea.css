@@ -1,0 +1,50 @@
+.k-control {
+  padding: 7.3px 14px;
+  align-items: center;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.k-control:hover {
+  background-color: #FAFAFA;
+  color: #414651;
+}
+
+.k-control input {
+  background-color: inherit;
+  transition: none;
+}
+
+.k-control > i {
+  font-weight: 500;
+  transition: none;
+}
+
+.k-control > i:first-child {
+  margin-left: -4px;
+}
+
+.k-control > i:last-child {
+  margin-right: -4px;
+}
+
+.k-control textarea {
+  background: transparent;
+  border: none;
+  outline: none;
+  width: 100%;
+  resize: vertical;
+  color: #414651;
+  font-size: var(--14px);
+  font-family: inherit;
+  line-height: 1.4;
+  min-height: 80px;
+  padding: 0;
+}
+
+.k-control textarea::placeholder {
+  color: #A1A1AA;
+}
+
+.k-control:hover textarea {
+  background-color: inherit;
+}

@@ -1,0 +1,54 @@
+.k-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 4px 10px;
+  border-radius: 16px;
+  font-size: var(--14px);
+  font-weight: 500;
+  text-align: center;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.k-badge > .icon {
+  font-size: var(--16px);
+  line-height: 1;
+}
+
+.k-badge-gray {
+  background-color: var(--gray-100);
+  color: var(--gray-700);
+  border: 1px solid var(--gray-300);
+}
+
+.k-badge-green {
+  background-color: var(--green-100);
+  color: var(--green-700);
+  border: 1px solid var(--green-200);
+}
+
+.k-badge-blue {
+  background-color: var(--blue-100);
+  color: var(--blue-700);
+  border: 1px solid var(--blue-200);
+}
+
+.k-badge-yellow {
+  background-color: var(--yellow-100);
+  color: var(--yellow-700);
+  border: 1px solid var(--yellow-200);
+}
+
+.k-badge-red {
+  background-color: var(--red-100);
+  color: var(--red-700);
+  border: 1px solid var(--red-200);
+}
+
+.k-badge-purple {
+  background-color: var(--purple-100);
+  color: var(--purple-700);
+  border: 1px solid var(--purple-200);
+}

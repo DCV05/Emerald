@@ -1,0 +1,41 @@
+@keyframes k-spinner-rotate {
+  0%   { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.k-spinner {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--spinner-size);
+  height: var(--spinner-size);
+}
+
+.k-spinner .icon {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-size: var(--spinner-size);
+  line-height: 1;
+  animation: k-spinner-rotate var(--spinner-speed) linear infinite;
+  color: var(--gray-600);
+}
+
+.k-spinner-blue .icon {
+  color: var(--blue-600);
+}
+
+.k-spinner-green .icon {
+  color: var(--green-600);
+}
+
+.k-spinner-red .icon {
+  color: var(--red-600);
+}
+
+.k-spinner-yellow .icon {
+  color: var(--yellow-600);
+}
+
+.k-spinner-purple .icon {
+  color: var(--purple-600);
+}

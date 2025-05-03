@@ -1,0 +1,38 @@
+.k-checkbox {
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.k-checkbox > input {
+  display: none;
+}
+
+.k-checkbox > .box {
+  width: 24px;
+  height: 24px;
+  border-radius: 6px;
+  border: 2px solid var(--gray-300);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  transition: all 0.2s ease-in-out;
+}
+
+.k-checkbox > .box > .icon {
+  font-family: var(--font-icons);
+  font-size: var(--18px);
+  color: white;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.k-checkbox > input:checked + .box {
+  background-color: #6366f1;
+  border-color: #6366f1;
+}
+
+.k-checkbox > input:checked + .box > .icon {
+  opacity: 1;
+}

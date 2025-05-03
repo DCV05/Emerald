@@ -1,0 +1,57 @@
+.k-kpi-wrap {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.k-kpi-data {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.k-kpi-value {
+  font-size: var(--20px);
+  color: #111827;
+  font-weight: 600;
+}
+
+.k-kpi-change {
+  font-size: var(--14px);
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.k-kpi-change > i {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-size: var(--16px);
+  line-height: 1;
+}
+
+.k-kpi-change.green {
+  color: var(--green-700);
+}
+
+.k-kpi-change.red {
+  color: var(--red-700);
+}
+
+.k-icon-block.green {
+  color: var(--green-700);
+  border-color: var(--green-200);
+  background-color: var(--green-100);
+}
+
+.k-icon-block.red {
+  color: var(--red-700);
+  border-color: var(--red-200);
+  background-color: var(--red-100);
+}
+
+.k-icon-block.gray {
+  color: var(--gray-700);
+  border-color: var(--gray-200);
+  background-color: var(--gray-100);
+}
