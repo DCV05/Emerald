@@ -190,3 +190,12 @@
   --white: #ffffff;
   --black: #000000;
 }
+
+:root {
+  --spacing-03: 0.5rem;
+  --spacing-05: 1rem;
+  --spacing-06: 1.5rem;
+  --spacing-08: 2.5rem;
+
+  --text-sm: 0.875rem;
+}

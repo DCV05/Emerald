@@ -1,4 +1,3 @@
-// archivo Textarea.php
 <?php
 
 /**
