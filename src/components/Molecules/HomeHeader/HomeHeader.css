@@ -1,0 +1,35 @@
+.em-home-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--spacing-06);
+  background-color: var(--white);
+}
+
+.em-home-header__left {
+  display: flex;
+  gap: var(--spacing-05);
+}
+
+.em-home-header__text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.em-home-header__message {
+  font-size: 20px;
+  font-weight: 550;
+  color: var(--gray-800);
+}
+
+.em-home-header__date {
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--gray-500);
+}
+
+.em-home-header__search {
+  min-width: 180px;
+  max-width: 400px;
+}

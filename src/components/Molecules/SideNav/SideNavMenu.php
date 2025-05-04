@@ -3,72 +3,78 @@
 /**
  * Componente SideNavMenu
  *
- * Representa un menú desplegable dentro del SideNav, compatible con modo rail y expansión controlada.
+ * Representa un menú desplegable dentro del SideNav.
  *
- * DEPENDENCIAS:
- * - se usa dentro de: SideNav (sidenav.php)
- * - contiene: SideNavLink (sidenav-link.php) u otros SideNavMenu
+ * DEPENDE DE:
+ * - SideNav (como hijo directo)
+ * - SideNavLink (como elementos anidados)
  */
 class SideNavMenu
 {
   private string $title;
   private array  $items;
-  private bool   $default_expanded;
   private bool   $is_expanded;
   private string $icon;
   private string $id;
   private string $class;
 
   /**
-   * Constructor del SideNavMenu
+   * Constructor del menú lateral
+   *
+   * @param string $title        Texto del botón principal
+   * @param array  $items        Lista de componentes hijos (SideNavLink u otros)
+   * @param bool   $is_expanded  Define si está expandido por defecto
+   * @param string $icon         Nombre del icono Material
+   * @param string $id           ID único (opcional)
+   * @param string $class        Clases CSS adicionales (opcional)
    */
   public function __construct(
       string $title
-    , array $items
-    , bool $default_expanded = false
-    , string $icon           = ''
-    , string $id             = ''
-    , string $class          = ''
+    , array  $items
+    , bool   $is_expanded = false
+    , string $icon        = ''
+    , string $id          = ''
+    , string $class       = ''
   )
   {
-    $this->title            = $title;
-    $this->items            = $items;
-    $this->default_expanded = $default_expanded;
-    $this->is_expanded      = $default_expanded;
-    $this->icon             = $icon;
-    $this->id               = $id;
-    $this->class            = $class;
+    $this->title        = $title;
+    $this->items        = $items;
+    $this->is_expanded  = $is_expanded;
+    $this->icon         = $icon;
+    $this->id           = $id;
+    $this->class        = $class;
   }
 
   /**
-   * Renderiza el menú completo
+   * Renderiza el menú del SideNav
    */
   public function render(): string
   {
-    // Clases del botón y lista
-    $li_class  = 'em-sidenav__item';
-    $ul_class  = 'em-sidenav__menu';
+    // Cálculo de clases e ID
+    $li_class      = 'em-sidenav__item';
+    $ul_class      = 'em-sidenav__menu';
+    $button_class  = 'em-sidenav-menu__button';
+    $expanded_attr = $this->is_expanded ? 'true' : 'false';
+
     if( $this->is_expanded ) $ul_class .= ' is-expanded';
-
-    $button_class = 'em-sidenav-menu__button';
     if( $this->class !== '' ) $button_class .= ' ' . $this->class;
+    $id_attr = $this->id !== '' ? 'id="' . $this->id . '"' : '';
 
-    $id_attr    = $this->id !== '' ? 'id="' . $this->id . '"' : '';
-    $expanded   = $this->is_expanded ? 'true' : 'false';
-    $icon_html  = $this->icon !== '' ? '<i class="icon">' . $this->icon . '</i>' : '';
+    // HTML de icono si lo hay
+    $icon_html = $this->icon !== '' ? '<i class="icon">' . $this->icon . '</i>' : '';
 
-    // Items internos
+    // Cálculo de hijos
     $items_html = '';
     foreach( $this->items as $item )
       $items_html .= $item->render();
 
-    // Plantilla HTML
+    // Máscara HTML
     $mask = '
       <li class="{{ li_class }}">
         <button class="{{ button_class }}" aria-expanded="{{ expanded }}" {{ id }}>
           {{ icon }}
           <span class="em-sidenav__link-text">{{ title }}</span>
-          <span class="em-sidenav-link__icon"><i class="icon">keyboard_arrow_up</i></span>
+          <span class="em-sidenav-link__icon"><i class="icon">keyboard_arrow_down</i></span>
         </button>
         <ul class="{{ ul_class }}">
           {{ items }}
@@ -78,14 +84,14 @@ class SideNavMenu
 
     // Datos
     $data = [
-        'li_class'      => $li_class
-      , 'button_class'  => $button_class
-      , 'expanded'      => $expanded
-      , 'id'            => $id_attr
-      , 'icon'          => $icon_html
-      , 'title'         => $this->title
-      , 'ul_class'      => $ul_class
-      , 'items'         => $items_html
+        'li_class'     => $li_class
+      , 'button_class' => $button_class
+      , 'expanded'     => $expanded_attr
+      , 'id'           => $id_attr
+      , 'icon'         => $icon_html
+      , 'title'        => $this->title
+      , 'ul_class'     => $ul_class
+      , 'items'        => $items_html
     ];
 
     return k_mask_row( $data, $mask );

@@ -18,7 +18,7 @@ $( document ).ready( function() {
     }
 
     // Al terminar la transición, quitar inline style si está expandido
-    submenu.off('transitionend').on('transitionend', function () {
+    submenu.off( 'transitionend').on( 'transitionend', function () {
       if( !expanded )
         submenu.css( 'max-height', 'none' );
     } );

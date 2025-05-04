@@ -1,11 +1,15 @@
+
+
 .em-sidenav {
   position: relative;
   display: flex;
   flex-direction: column;
-  width: 240px;
-  min-width: 240px;
-  background-color: var(--gray-100);
-  transition: width 0.2s ease;
+  background-color: #ffffff;
+  border: 1.5px solid rgb(233, 234, 235);
+  border-radius: 12px;
+  transition: width 0.3s ease;
+  font-family: sans-serif;
+  padding: 15px;
 }
 
 .em-sidenav--collapsed {
@@ -19,8 +23,8 @@
 }
 
 .em-sidenav--expanded {
-  width: 240px;
-  min-width: 240px;
+  width: 280px;
+  min-width: 280px;
 }
 
 .em-sidenav--hidden {
@@ -39,69 +43,107 @@
   margin: 0;
 }
 
+.em-sidenav__section-title {
+  font-size: 12px;
+  font-weight: 600;
+  color: #6b7280;
+  text-transform: uppercase;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+  padding-left: 0.375rem;
+}
+
 .em-sidenav__item {
   display: block;
+  margin-bottom: 7px;
 }
 
 .em-sidenav__link {
   display: flex;
   align-items: center;
-  padding: var(--spacing-03) var(--spacing-05);
-  color: var(--gray-800);
-  text-decoration: none;
-  font-size: var(--text-sm);
-  transition: background-color 0.2s;
+  padding: 8px 10px;
   width: 100%;
+  color: #374151;
+  text-decoration: none;
+  font-size: 14px;
+  border-radius: 0.5rem;
+  transition: background-color 0.3s;
 }
 
 .em-sidenav__link:hover,
 .em-sidenav__link:focus {
-  background-color: var(--gray-200);
+  background-color: rgb(249, 249, 249);
 }
 
 .em-sidenav__link--current {
-  font-weight: bold;
-  background-color: var(--gray-300);
+  background-color: rgb(246, 246, 246);
+  font-weight: 600;
 }
 
 .em-sidenav__link > .icon {
-  margin-right: var(--spacing-03);
+  margin-right: 12px;
   font-size: 20px;
+  color: #6b7280;
 }
 
 .em-sidenav__link-text {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  flex: 1;
+}
+
+.em-sidenav__badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 1 / 1;
+  margin-left: auto;
+
+  padding: 2px 8px;
+  border: 1px solid #D5D7DA;
+  border-radius: 8px;
+
+  font-size: 12px;
+  font-weight: 500;
+  color: #374151;
+
+  background-color: white;
+
+  box-shadow: inset 0 -2px 0 #FAFAFA, 0 1px 2px #0a0d120d;
 }
 
 .em-sidenav-menu__button {
   width: 100%;
   background: none;
   border: none;
-  padding: var(--spacing-03) var(--spacing-05);
+  padding: 10px 12px;
   text-align: left;
   display: flex;
   align-items: center;
-  font-size: var(--text-sm);
-  color: var(--gray-800);
+  font-size: 14px;
+  color: #374151;
   cursor: pointer;
-  transition: background-color 0.2s;
+  border-radius: 0.5rem;
+  transition: background-color 0.3s;
 }
 
 .em-sidenav-menu__button:hover,
 .em-sidenav-menu__button:focus {
-  background-color: var(--gray-200);
+  background-color: #f3f4f6;
 }
 
 .em-sidenav-menu__button > .icon {
-  margin-right: var(--spacing-03);
+  margin-right: 12px;
   font-size: 20px;
+  color: #6b7280;
 }
 
 .em-sidenav-menu__button > .em-sidenav-link__icon {
   margin-left: auto;
-  transition: transform 0.2s;
+  transition: transform 0.3s;
+  font-size: 18px;
+  color: #9ca3af;
 }
 
 .em-sidenav-menu__button[aria-expanded="true"] > .em-sidenav-link__icon {
@@ -116,6 +158,7 @@
   list-style: none;
   padding: 0;
   margin: 0;
+  padding-left: 1.75rem;
 }
 
 .em-sidenav__menu.is-expanded {
@@ -125,21 +168,21 @@
 .em-sidenav__menu > .em-sidenav__item > a {
   display: flex;
   align-items: center;
+  padding: 8px 12px;
   width: 100%;
-  padding: var(--spacing-03) var(--spacing-05);
-  padding-left: var(--spacing-08);
-  color: var(--gray-800);
+  font-size: 14px;
+  color: #374151;
   text-decoration: none;
-  font-size: var(--text-sm);
-  transition: background-color 0.2s;
+  border-radius: 0.5rem;
+  transition: background-color 0.3s;
 }
 
 .em-sidenav__menu > .em-sidenav__item > a:hover,
 .em-sidenav__menu > .em-sidenav__item > a:focus {
-  background-color: var(--gray-200);
+  background-color: rgb(249, 249, 249);
 }
 
 .em-sidenav__menu > .em-sidenav__item > a.em-sidenav__link--current {
-  font-weight: bold;
-  background-color: var(--gray-300);
+  background-color: rgb(246, 246, 246);
+  font-weight: 600;
 }

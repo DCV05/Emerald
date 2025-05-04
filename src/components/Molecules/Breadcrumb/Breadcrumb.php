@@ -63,7 +63,7 @@ class Breadcrumb
       $icon       = $item['icon']  ?? '';
       $icon_html  = $icon > '' ? '<i class="icon">' . $icon . '</i>' : '';
 
-      // Si no es el último paso y tiene URL, lo hacemos clicable
+      // Si no es el último paso y tiene URL, lo hacemos clickable
       if( $item_index < $last_index && $url > '' )
         $html_items .= '<li><a href="' . $url . '">' . $icon_html . $label . '</a></li>';
       else

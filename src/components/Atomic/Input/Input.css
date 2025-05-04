@@ -15,6 +15,11 @@
   cursor: pointer;
 }
 
+.k-control input {
+  border: 0;
+  outline: none;
+}
+
 .k-input:hover, .k-input:hover * {
   background: #FAFAFA;
 }
