@@ -1,4 +1,4 @@
-# EMERALD
+# Emerald
 
 **Emerald** is a modular, lightweight, and dependency-free design system that structures reusable components using pure PHP, JavaScript (jQuery), and CSS. Inspired by the Carbon Design System and Atomic Design methodology, Emerald is built for projects that require clarity, visual consistency, and scalability without heavy frameworks.
 
