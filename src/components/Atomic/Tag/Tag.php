@@ -9,6 +9,7 @@ class Tag
   private string $color;
   private string $icon;
   private string $icon_position;
+  private string $icon_color;
   private string $id;
   private string $class;
 
@@ -19,15 +20,17 @@ class Tag
    * @param string $color Color base: gray, blue, green, yellow, red, purple (opcional)
    * @param string $icon HTML del icono (opcional)
    * @param string $icon_position Posición del icono (left|right) (opcional)
+   * @param string $icon_color Color del icono (opcional)
    * @param string $id ID del tag (opcional)
    * @param string $class Clases CSS adicionales (opcional)
    */
-  public function __construct( string $text, string $color = '', string $icon = '', string $icon_position = '', string $id = '', string $class = '' )
+  public function __construct( string $text, string $color = '', string $icon = '', string $icon_position = '', string $icon_color = '', string $id = '', string $class = '' )
   {
     $this->text          = $text;
     $this->color         = $color;
     $this->icon          = $icon;
     $this->icon_position = $icon_position;
+    $this->icon_color    = $icon_color;
     $this->id            = $id;
     $this->class         = $class;
   }
@@ -49,7 +52,7 @@ class Tag
     if( $this->icon_position === 'right' )
     {
       $mask = '
-        <span class="k-tag k-tag-{{ color }} {{ class }}" {{ id }}>
+        <span class="k-tag {{ color }} {{ class }}" {{ id }}>
           <span>{{ text }}</span>
           {{ icon }}
         </span>
@@ -58,7 +61,7 @@ class Tag
     else
     {
       $mask = '
-        <span class="k-tag k-tag-{{ color }} {{ class }}" {{ id }}>
+        <span class="k-tag {{ color }} {{ class }}" {{ id }}>
           {{ icon }}
           <span>{{ text }}</span>
         </span>
@@ -66,12 +69,12 @@ class Tag
     }
 
     // Establecemos un icono por defecto
-    $icon = $this->icon !== '' ? '<i class="icon">' . $this->icon . '</i>' : '';
+    $icon = $this->icon !== '' ? '<i style="color: ' . $this->icon_color . '"; class="icon">' . $this->icon . '</i>' : '';
 
     // Generamos el array de datos del tag
     $data = [
         'text'  => $this->text
-      , 'color' => $this->color
+      , 'color' => 'k-tag-' . $this->color
       , 'icon'  => $icon
       , 'id'    => $id
       , 'class' => $this->class
