@@ -5,53 +5,60 @@
 .k-tag-yellow,
 .k-tag-red,
 .k-tag-purple {
-  padding: 4px 10px;
-  border-radius: 16px;
+  padding: 4px;
+  gap: 3px;
+  border-radius: 8px;
   display: flex;
   align-items: center;
   text-align: center;
-  gap: 6px;
   width: fit-content;
+  font-size: var(--16px);
+  box-shadow: inset 0 -2px 0 #FAFAFA, 0 1px 2px #0a0d120d;
+}
+
+.k-tag i.icon {
+  font-size: var(--17px) !important;
+  font-weight: 600;
 }
 
 .k-tag {
   color: var(--gray-800);
-  background-color: var(--gray-100);
-  border: 2px solid var(--gray-300);
+  background-color: var(--white);
+  border: 1.5px solid var(--gray-300);
 }
 
 .k-tag-gray {
   color: var(--gray-700);
   background-color: var(--gray-100);
-  border: 2px solid var(--gray-200);
+  border: 1.5px solid var(--gray-200);
 }
 
 .k-tag-blue {
   color: var(--blue-700);
   background-color: var(--blue-100);
-  border: 2px solid var(--blue-200);
+  border: 1.5px solid var(--blue-200);
 }
 
 .k-tag-green {
   color: var(--green-700);
   background-color: var(--green-100);
-  border: 2px solid var(--green-200);
+  border: 1.5px solid var(--green-200);
 }
 
 .k-tag-yellow {
   color: var(--yellow-700);
   background-color: var(--yellow-100);
-  border: 2px solid var(--yellow-200);
+  border: 1.5px solid var(--yellow-200);
 }
 
 .k-tag-red {
   color: var(--red-700);
   background-color: var(--red-100);
-  border: 2px solid var(--red-200);
+  border: 1.5px solid var(--red-200);
 }
 
 .k-tag-purple {
   color: var(--purple-700);
   background-color: var(--purple-100);
-  border: 2px solid var(--purple-200);
+  border: 1.5px solid var(--purple-200);
 }

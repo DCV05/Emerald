@@ -24,4 +24,9 @@
 
 const EmeraldDir = '/k/apps/kodalogic/Emerald/src';
 
+import( `${EmeraldDir}/components/Atomic/CarbonButton/CarbonButton.js` );
+import( `${EmeraldDir}/components/Atomic/CarbonInput/CarbonInput.js` );
+import( `${EmeraldDir}/components/Atomic/CarbonTextarea/CarbonTextarea.js` );
+import( `${EmeraldDir}/components/Atomic/CarbonSelect/CarbonSelect.js` );
+import( `${EmeraldDir}/components/Atomic/CarbonCheckbox/CarbonCheckbox.js` );
 import( `${EmeraldDir}/components/Molecules/SideNav/Sidenav.js` );
