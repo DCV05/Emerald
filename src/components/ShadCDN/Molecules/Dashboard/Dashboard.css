@@ -1,0 +1,41 @@
+.em--dashboard {
+  margin: .5rem;
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-dashboard);
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  width: 100%;
+  position: relative;
+  background-color: var(--white);
+
+  @media (min-width: 768px) {
+    &[data-variant="inset"] {
+      margin: 0.5rem;
+      border-radius: var(--radius-xl);
+      box-shadow: var(--shadow-sm);
+    }
+
+    &[data-state="collapsed"][data-variant="inset"] {
+      margin-left: 0.5rem;
+    }
+  }
+}
+
+.em--dashboard__content {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  gap: 0.875rem;
+}
+
+.em--dashboard__header {
+  display: flex;
+  align-items: center;
+  height: 48px;
+  padding: 0 1rem;
+  border-bottom: 1px solid var(--border);
+  gap: 0.5rem;
+}

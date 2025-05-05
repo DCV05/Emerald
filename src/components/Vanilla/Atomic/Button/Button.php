@@ -11,6 +11,7 @@ class Button
   private string $icon;
   private string $icon_position;
   private string $id;
+  private string $size;
 
   /**
    * Constructor del botón.
@@ -21,8 +22,17 @@ class Button
    * @param string $icon  HTML del icono (opcional)
    * @param string $icon  Posición del icono (opcional)
    * @param string $id    ID del botón (opcional)
+   * @param string $size Tamaño del botón: sm|base|md|lg|xl (opcional)
    */
-  public function __construct( string $title, string $type = '', string $class = '', string $icon = '', string $icon_position = '', string $id = '' )
+  public function __construct(
+      string $title
+    , string $type = ''
+    , string $class = ''
+    , string $icon = ''
+    , string $icon_position = ''
+    , string $id = ''
+    , string $size = 'base'
+  )
   {
     $this->title          = $title;
     $this->type           = $type;
@@ -30,6 +40,7 @@ class Button
     $this->icon           = $icon;
     $this->icon_position  = $icon_position;
     $this->id             = $id;
+    $this->size           = $size;
   }
 
   /**
@@ -49,8 +60,8 @@ class Button
     if( $this->icon_position === 'right' )
     {
       $mask = '
-        <button type="{{ type }}" class="k-button {{ class }}" {{ id }}>
-          <span>{{ title }}</span>
+        <button type="{{ type }}" class="em-button {{ class }}" {{ id }}>
+          {{ title }}
           {{ icon }}
         </button>
       ';
@@ -58,9 +69,9 @@ class Button
     else
     {
       $mask = '
-        <button type="{{ type }}" class="k-button {{ class }}" {{ id }}>
+        <button type="{{ type }}" class="em-button {{ class }}" {{ id }}>
           {{ icon }}
-          <span>{{ title }}</span>
+          {{ title }}
         </button>
       ';
     }
@@ -70,7 +81,7 @@ class Button
     
     // Generamos el array de datos del botón
     $button_data = [
-        'title' => $this->title
+        'title' => $this->title ? '<span>' . $this->title . '</span>' : ''
       , 'type'  => $this->type
       , 'class' => $this->class
       , 'icon'  => $icon

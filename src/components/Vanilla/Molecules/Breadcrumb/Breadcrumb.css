@@ -1,0 +1,49 @@
+.em--breadcrumb {
+  display: flex;
+  align-items: center;
+  height: 3rem;
+  border-bottom: 1px solid var(--border);
+  padding: 1rem 8px;
+  gap: var(--spacing-02);
+}
+
+.em--breadcrumb > ul {
+  padding: 0;
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-04);
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1;
+}
+
+.em--breadcrumb li {
+  display: flex;
+  align-items: center;
+  color: rgb(13, 13, 13);
+  font-size: var(--15px);
+}
+
+.em--breadcrumb li a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  gap: var(--spacing-01);
+  color: rgb(13, 13, 13);
+}
+
+.em--breadcrumb li span {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-01);
+}
+
+.em--breadcrumb .icon {
+  font-size: var(--20px) !important;
+}
+
+.em--breadcrumb-separator {
+  width: 1px;
+  height: 1rem;
+  background-color: var(--border);
+}

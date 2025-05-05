@@ -1,4 +1,4 @@
-.k-button, .k-button-lg, .k-button-xl {
+.em-button, .em-button-lg, .em-button-xl {
   width: fit-content;
   background: #fff;
   border: 1px solid #D5D7DA;
@@ -16,42 +16,42 @@
   font-weight: 600;
 }
 
-.k-button-lg { padding: 10px 16px; }
+.em-button-lg { padding: 10px 16px; }
 
-.k-button-xl {
+.em-button-xl {
   font-weight: 600;
   padding: 12px 18px;
 }
 
-.k-button-xl:has(i) {
+.em-button-xl:has(i) {
   padding: 8.75px 18px;
 }
 
-.k-button:hover, .k-button-lg:hover, .k-button-xl:hover,
-.k-button:hover *, .k-button-lg:hover *, .k-button-xl:hover * {
+.em-button:hover, .em-button-lg:hover, .em-button-xl:hover,
+.em-button:hover *, .em-button-lg:hover *, .em-button-xl:hover * {
   background: #FAFAFA;
 }
 
-.k-button:disabled {
+.em-button:disabled {
   color: #B4B4B4;
   cursor: not-allowed;
   pointer-events: none;
 }
 
-.k-button > i:first-child {
+.em-button > i:first-child {
   margin-left: -4px;
 }
 
-.k-button > i:last-child {
+.em-button > i:last-child {
   margin-right: -4px;
 }
 
-.k-button-blue {
+.em-button-blue {
   color: white;
   background-color: #5560f5;
   box-shadow: none;
 }
 
-.k-button-blue:hover, .k-button-blue:hover * {
+.em-button-blue:hover, .em-button-blue:hover * {
   background: #4651f1;
 }

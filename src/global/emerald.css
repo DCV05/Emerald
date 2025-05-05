@@ -38,8 +38,12 @@
 
 @charset "UTF-8";
 
-@import url( '../components/Molecules/MetricCard/MetricCard.css' );
-@import url( '../components/Atomic/Tag/Tag.css' );
+@import url( '../components/ShadCDN/Molecules/Sidebar/Sidebar.css' );
+@import url( '../components/ShadCDN/Molecules/Dashboard/Dashboard.css' );
+@import url( '../components/Vanilla/Molecules/Breadcrumb/Breadcrumb.css' );
+@import url( '../components/ShadCDN/Molecules/MetricCard/MetricCard.css' );
+@import url( '../components/Vanilla/Atomic/Tag/Tag.css' );
+@import url( '../components/Vanilla/Atomic/Table/Table.css' );
 
 /*
 @import url( '../components/Atomic/CarbonButton/CarbonButton.css' );
@@ -67,6 +71,8 @@
 @import url( '../components/Molecules/HomeHeader/HomeHeader.css' );
 */
 
+@import url('https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
 @font-face {
   font-family: 'Inter';
   font-style: normal;
@@ -88,6 +94,12 @@
   -ms-text-size-adjust: 100%;
   font-family: "Inter", sans-serif;
   box-sizing: border-box;
+}
+
+.geist-mono, .geist-mono *:not(i) {
+  font-family: "Geist Mono", monospace !important;
+  font-optical-sizing: auto;
+  font-style: normal;
 }
 
 body {
@@ -647,50 +659,23 @@ Definición de los border-radius                                                
 .radius-full  { border-radius: 9999px;  }
 
 
-/* ---------------------------------------- */
-/* K COMPONENTS                             */
-/* ---------------------------------------- */
-
-/* -------------------- K TABLE -------------------- */
-.k-table {
-  border-collapse: separate; /* Permite el border-radius */
-  border-spacing: 0; /* Elimina separación entre celdas */
-  border-radius: 12px;
-  width: 100%;
-  border: 1px solid #E9EAEB;
-  margin-bottom: 1rem;
+.flex-start {
+  display: flex;
+  align-items: start;
+  justify-content: start;
+  gap: 0.875rem;
 }
 
-.k-table thead th,
-.k-table tbody tr td {
-  border-bottom: 1px solid #E9EAEB;
-  font-size: var( --14px );
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.875rem;
 }
 
-.k-table tbody tr:last-child td {
-  border: 0;
-}
-
-.k-table thead th:first-child {
-  border-top-left-radius: 10px !important;
-}
-
-.k-table thead th:last-child {
-  border-top-right-radius: 10px !important;
-}
-
-.k-table thead th {
-  border-radius: 0 !important;
-  padding: 0.5rem 1rem;
-  font-weight: normal;
-  background-color: #FAFAFA;
-}
-
-.k-table tbody tr td {
-  padding: 0.75rem 1rem;
-}
-
-.k-table thead th a {
-  color: #717680;
-  text-decoration: none;
+.flex-end {
+  display: flex;
+  align-items: end;
+  justify-content: end;
+  gap: 0.875rem;
 }

@@ -1,11 +1,11 @@
-.k-tag,
-.k-tag-gray,
-.k-tag-blue,
-.k-tag-green,
-.k-tag-yellow,
-.k-tag-red,
-.k-tag-purple {
-  padding: 4px;
+.em-tag,
+.em-tag-gray,
+.em-tag-blue,
+.em-tag-green,
+.em-tag-yellow,
+.em-tag-red,
+.em-tag-purple {
+  padding: 4px 6px;
   gap: 3px;
   border-radius: 8px;
   display: flex;
@@ -16,48 +16,48 @@
   box-shadow: inset 0 -2px 0 #FAFAFA, 0 1px 2px #0a0d120d;
 }
 
-.k-tag i.icon {
+.em-tag i.icon {
   font-size: var(--17px) !important;
   font-weight: 600;
 }
 
-.k-tag {
+.em-tag {
   color: var(--gray-800);
   background-color: var(--white);
   border: 1.5px solid var(--gray-300);
 }
 
-.k-tag-gray {
+.em-tag-gray {
   color: var(--gray-700);
   background-color: var(--gray-100);
   border: 1.5px solid var(--gray-200);
 }
 
-.k-tag-blue {
+.em-tag-blue {
   color: var(--blue-700);
   background-color: var(--blue-100);
   border: 1.5px solid var(--blue-200);
 }
 
-.k-tag-green {
+.em-tag-green {
   color: var(--green-700);
   background-color: var(--green-100);
   border: 1.5px solid var(--green-200);
 }
 
-.k-tag-yellow {
+.em-tag-yellow {
   color: var(--yellow-700);
   background-color: var(--yellow-100);
   border: 1.5px solid var(--yellow-200);
 }
 
-.k-tag-red {
+.em-tag-red {
   color: var(--red-700);
   background-color: var(--red-100);
   border: 1.5px solid var(--red-200);
 }
 
-.k-tag-purple {
+.em-tag-purple {
   color: var(--purple-700);
   background-color: var(--purple-100);
   border: 1.5px solid var(--purple-200);

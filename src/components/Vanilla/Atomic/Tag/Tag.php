@@ -52,7 +52,7 @@ class Tag
     if( $this->icon_position === 'right' )
     {
       $mask = '
-        <span class="k-tag {{ color }} {{ class }}" {{ id }}>
+        <span class="em-tag {{ color }} {{ class }}" {{ id }}>
           <span>{{ text }}</span>
           {{ icon }}
         </span>
@@ -61,7 +61,7 @@ class Tag
     else
     {
       $mask = '
-        <span class="k-tag {{ color }} {{ class }}" {{ id }}>
+        <span class="em-tag {{ color }} {{ class }}" {{ id }}>
           {{ icon }}
           <span>{{ text }}</span>
         </span>
@@ -74,7 +74,7 @@ class Tag
     // Generamos el array de datos del tag
     $data = [
         'text'  => $this->text
-      , 'color' => 'k-tag-' . $this->color
+      , 'color' => 'em-tag-' . $this->color
       , 'icon'  => $icon
       , 'id'    => $id
       , 'class' => $this->class

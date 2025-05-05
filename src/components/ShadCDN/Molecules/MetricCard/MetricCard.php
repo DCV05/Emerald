@@ -55,7 +55,7 @@ class MetricCard
           </div>
           <div class="em--metric-card__info">
             <div class="em--metric-card__title">{{ title }}</div>
-            <div class="em--metric-card__value">{{ value }}</div>
+            <div class="geist-mono em--metric-card__value">{{ value }}</div>
             {{ content }}
             {{ description }}
           </div>

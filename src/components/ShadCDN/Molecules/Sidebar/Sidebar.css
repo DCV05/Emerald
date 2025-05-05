@@ -1,0 +1,143 @@
+:root {
+  --sidebar-width: 280px;
+  --sidebar-width-icon: 48px;
+
+  --sidebar: rgb(249,249,249);
+  --sidebar-foreground: var(--gray-900);
+  --sidebar-border: var(--gray-300);
+  --sidebar-accent: rgb(242,242,242);
+  --sidebar-accent-foreground: var(--gray-900);
+  --sidebar-ring: var(--blue-500);
+
+  --radius-sm: 4px;
+  --radius-md: 6px;
+}
+
+.em--sidebar {
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: var(--sidebar-width);
+  background-color: inherit;
+  color: var(--sidebar-foreground);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: width 0.3s ease-in-out;
+}
+
+.em--sidebar[data-collapsible="icon"] {
+  width: var(--sidebar-width-icon);
+}
+
+.em--sidebar[data-collapsible="icon"] .em--sidebar__menu-button > span,
+.em--sidebar[data-collapsible="icon"] .em--sidebar__group-label {
+  opacity: 0;
+  transform: scaleX(0);
+  pointer-events: none;
+}
+
+.em--sidebar:not([data-collapsible="icon"]) .em--sidebar__menu-button > span,
+.em--sidebar:not([data-collapsible="icon"]) .em--sidebar__group-label {
+  opacity: 1;
+  transform: scaleX(1);
+  pointer-events: auto;
+}
+
+.em--sidebar[data-variant="floating"] {
+  border: 1px solid var(--sidebar-border);
+  border-radius: var(--radius-md);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.em--sidebar__header,
+.em--sidebar__footer {
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.em--sidebar__content {
+  flex: 1;
+  overflow-y: auto;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 8px;
+}
+
+.em--sidebar__group-label {
+  height: 32px;
+  padding: 0 8px;
+  font-size: var(--12px);
+  font-weight: 500;
+  color: var(--sidebar-foreground);
+  opacity: 0.7;
+  display: flex;
+  align-items: center;
+  margin-top: 12px;
+}
+
+.em--sidebar__menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.em--sidebar__menu-item {
+  position: relative;
+}
+
+.em--sidebar__menu-button,
+.em--sidebar__toggle-button {
+  all: unset;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px;
+  border-radius: var(--radius-md);
+  font-size: 14px;
+  line-height: 1;
+  cursor: pointer;
+  text-align: left;
+}
+
+.em--sidebar__toggle-button {
+  transition: all 0.2s ease-in-out;
+}
+
+.em--sidebar__menu-button:hover,
+.em--sidebar__toggle-button:hover {
+  background-color: var(--sidebar-accent);
+  color: var(--sidebar-accent-foreground);
+}
+
+.em--sidebar__menu-button:focus-visible,
+.em--sidebar__toggle-button:focus-visible {
+  outline: 2px solid var(--sidebar-ring);
+  outline-offset: 2px;
+}
+
+.em--sidebar__menu-button[data-active="true"],
+.em--sidebar__toggle-button[data-active="true"] {
+  background-color: var(--sidebar-accent);
+  color: var(--sidebar-accent-foreground);
+  font-weight: 500;
+}
+
+.em--sidebar__menu-button .icon,
+.em--sidebar__toggle-button .icon {
+  font-size: 20px !important;
+  flex-shrink: 0;
+}
+
+.em--sidebar__menu-button span,
+.em--sidebar__toggle-button span {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
